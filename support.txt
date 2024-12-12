@@ -1,0 +1,21 @@
+Programming Languages Supported
+BIT is compatible with multiple programming languages. However, over time, its skills can increase. Several of the languages that are frequently supported are:
+
+Python
+JavaScript
+Java
+C++
+C#
+Ruby
+PHP
+Go
+Swift
+Kotlin
+SQL
+
+
+Code generation and debugging in various languages can be aided by BIT. It can still assist with general coding principles and reasoning even if your language isn’t on the list.
+
+BIT may be out of date about programming languages.
+Always review the code twice, especially for large projects that BIT offers you.
+Even though it doesn’t always produce flawless code, BIT can assist in explaining coding fundamentals in any language.

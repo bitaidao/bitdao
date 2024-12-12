@@ -1,0 +1,35 @@
+https://www.youtube.com/watch?v=-ocbMjGxAEA
+
+Using ZeusNode Operator we deposited our pump.fun creation fee to a Hot Reserve wallet.
+https://mempool.space/address/bc1qj57d0v2s2u50pjv8d5j2wewmp68luyvwlfym8r
+https://mempool.space/tx/cfff2ad2c3e2e3551d9909fb2709682f16cbb66a7a737d84323ef6bb6ed585f5
+
+ZeusNode Guardian locked the bitcoin and turned it into zBTC.
+
+$zBTC represents a revolutionary solution catering to Bitcoin holders and developers seeking to engage with smart contracts on Solana.
+
+Key features of $zBTC include
+Permissionless and Uncensored: Participation and interaction with $zBTC are open to all, devoid of any centralized entity exercising custody over BTC.
+
+1:1 Price Pegged: Maintains a constant exchange ratio of 1:1 with BTC on the Bitcoin blockchain, ensuring seamless interoperability.
+
+Flexibility and Accessibility: Opportunity to participate in DeFi strategies and leverage Bitcoin assets for potential earnings.
+
+The potential applications of $zBTC within the Solana ecosystem are vast, including:
+
+
+Depositing $zBTC into DeFi protocols to earn yields.
+
+Liquidity Provider for $zBTC earning LP fees.
+
+Swapping $zBTC for any SPL token.
+
+Collateralizing $zBTC to create stablecoins.
+
+And more...
+
+To create a pump.fun token we only need to swap the $zBTC which we are the first one to do it in order to create a solana token, once the mainet explorer is live, u can check here:
+
+https://zeusscan.io/
+
+Will update the file when the tx is confirmed with the pumpfun link.

@@ -32,4 +32,6 @@ To create a pump.fun token we only need to swap the $zBTC which we are the first
 
 https://zeusscan.io/
 
-Will update the file when the tx is confirmed with the pumpfun link.
+TX Confirmed
+
+https://solscan.io/tx/mq5EYCzeVrHdy5rPCbCTJxheoh12Uzn78pkABwhaRt4GhZaGuUUY1ie5FLaDfErDV4tXaN5b6Q5wM3FcEmoHnEd

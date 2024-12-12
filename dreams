@@ -1,0 +1,97 @@
+import React, { useState, useEffect } from 'react';
+
+const BitcoinCharacter = () => {
+  const [isWalking, setIsWalking] = useState(false);
+  const [isWaving, setIsWaving] = useState(false);
+  const [mood, setMood] = useState('happy');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setMood(Math.random() > 0.5 ? 'happy' : 'worried');
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleWave = () => {
+    setIsWaving(true);
+    setTimeout(() => setIsWaving(false), 1000);
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center p-8 h-96">
+      <div 
+        className={`relative cursor-pointer ${isWalking ? 'animate-bounce' : ''}`}
+        onMouseEnter={() => setIsWalking(true)}
+        onMouseLeave={() => setIsWalking(false)}
+        onClick={handleWave}
+      >
+        {/* Head/Body */}
+        <div className="w-40 h-40 rounded-full bg-yellow-400 border-8 border-yellow-500 
+          relative flex items-center justify-center">
+          
+          {/* Bitcoin Symbol */}
+          <div className="text-4xl font-bold text-white">₿</div>
+
+          {/* Eyes */}
+          <div className="absolute top-10 left-10 w-6 h-6 bg-white rounded-full" />
+          <div className="absolute top-10 right-10 w-6 h-6 bg-white rounded-full" />
+
+          {/* Mouth */}
+          <div className={`absolute ${mood === 'happy' ? 'bottom-12' : 'top-24'} 
+            left-1/2 -translate-x-1/2 w-16 h-8 border-4 border-white rounded-lg
+            ${mood === 'happy' ? 'border-t-0' : 'border-b-0'}`} />
+
+          {/* Left Arm */}
+          <div className={`absolute -left-8 top-16 w-12 h-4 bg-yellow-500 rounded-full
+            origin-right transform ${isWaving ? 'animate-[wave_0.5s_ease-in-out_infinite]' : '-rotate-45'}`}>
+            <div className="absolute left-0 top-0 w-4 h-4 bg-yellow-500 rounded-full" />
+          </div>
+
+          {/* Right Arm */}
+          <div className="absolute -right-8 top-16 w-12 h-4 bg-yellow-500 rounded-full
+            origin-left transform rotate-45">
+            <div className="absolute right-0 top-0 w-4 h-4 bg-yellow-500 rounded-full" />
+          </div>
+
+          {/* Left Leg */}
+          <div className={`absolute -left-4 -bottom-16 w-4 h-16 bg-yellow-500 rounded-full
+            origin-top transform ${isWalking ? 'animate-[leftStep_1s_infinite]' : ''}`}>
+            <div className="absolute left-0 bottom-0 w-6 h-4 bg-yellow-500 rounded-full" />
+          </div>
+
+          {/* Right Leg */}
+          <div className={`absolute -right-4 -bottom-16 w-4 h-16 bg-yellow-500 rounded-full
+            origin-top transform ${isWalking ? 'animate-[rightStep_1s_infinite]' : ''}`}>
+            <div className="absolute right-0 bottom-0 w-6 h-4 bg-yellow-500 rounded-full" />
+          </div>
+        </div>
+      </div>
+
+      {/* Speech Bubble */}
+      {isWaving && (
+        <div className="mt-4 p-2 bg-white rounded-lg shadow-lg text-center">
+          <p className="text-sm">
+            {mood === 'happy' ? "To the moon! 🚀" : "HODL! 💎🙌"}
+          </p>
+        </div>
+      )}
+
+      <style jsx>{`
+        @keyframes wave {
+          0%, 100% { transform: rotate(-45deg); }
+          50% { transform: rotate(-90deg); }
+        }
+        @keyframes leftStep {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(30deg); }
+        }
+        @keyframes rightStep {
+          0%, 100% { transform: rotate(0deg); }
+          50% { transform: rotate(-30deg); }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default BitcoinCharacter;
